@@ -1,4 +1,1 @@
 discord
-os
-random
-asyncio
