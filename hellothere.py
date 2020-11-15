@@ -217,4 +217,4 @@ async def on_message(message):
             await message.channel.send(response)
             await asyncio.sleep(3)
 
-bot.run(os.environ[DISCORD_TOKEN])
+bot.run(os.environ['DISCORD_TOKEN'])
