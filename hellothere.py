@@ -133,10 +133,9 @@ darth_sidious = ["Now, young Skywalker, you will die.",
 princess_leia = ["Why, you stuck-up, half-witted, scruffy-looking nerf herder!",
                  "You came in that thing? You're braver than I thought."]
 padme = ["So this is how liberty dies. With thunderous applause.", "You're breaking my heart. You're going down a path I can't follow."]
-Sid_is_bad = ["Sid is now obligated to give all of his stuff to his superior brother"]
 jar_jar = ["Yousa should follow me now, okeeday?", "Mesa called Jar Jar Binks, mesa your humble servant!"]
 
-allcharacters = [luke, qui_gon, yoda, han_solo, obi_wan, darth_vader, mace_windu, darth_sidious, princess_leia, padme, Sid_is_bad, jar_jar]
+allcharacters = [luke, qui_gon, yoda, han_solo, obi_wan, darth_vader, mace_windu, darth_sidious, princess_leia, padme, jar_jar]
 
 @bot.event
 async def on_ready():
@@ -205,8 +204,6 @@ async def on_message(message):
             response = random.choice(padme)
         elif "jar jar" in message.content.lower()[1:]:
             response = random.choice(jar_jar)
-        elif "Sid is bad" in message.content.lower()[1:]:
-            response = random.choice(Sid_is_bad)
         else:
             response = "Invalid input"
         await message.channel.send(response)
