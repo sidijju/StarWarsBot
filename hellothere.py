@@ -59,7 +59,8 @@ responses = {"hello there":["General Kenobi."],
             "now this is podracing!": ["I'll try spinning!"],
             "strike me down": ["And your journey to the Dark Side will be complete."],
             "i don't like sand": ["It's coarse and rough and irritating and it gets everywhere."],
-             "from my point of view": ["The Jedi are evil"]}
+             "from my point of view": ["The Jedi are evil"],
+             "execute":["Order 66"]}
 
 opening_scrolls = {1: ["Turmoil has engulfed the Galactic Republic.",
                        "The taxation of trade routes to outlying star systems is in dispute.",
@@ -176,7 +177,7 @@ async def on_message(message):
 
         for response in scrolls:
             await message.channel.send(response)
-            await asyncio.sleep(3)
+            #await asyncio.sleep(3)
 
 
     elif len(message.content) > 0 and message.content[0] == '$':
@@ -211,6 +212,6 @@ async def on_message(message):
     elif message.content.lower() in responses:
         for response in responses[message.content.lower()]:
             await message.channel.send(response)
-            await asyncio.sleep(3)
+            #await asyncio.sleep(3)
 
 bot.run(os.environ['DISCORD_TOKEN'])
