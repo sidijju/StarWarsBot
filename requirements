@@ -1,2 +1,0 @@
-git+https://github.com/Rapptz/discord.py@rewrite
-async-timeout==3.0.1
