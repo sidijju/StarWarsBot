@@ -4,13 +4,13 @@ import random
 import asyncio
 
 import discord
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from discord.ext import commands
 
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+#load_dotenv()
+#TOKEN = os.getenv('DISCORD_TOKEN')
 
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='$')
 
 responses = {"hello there":["General Kenobi."],
              "impossible":["Perhaps the archives are incomplete."],
@@ -217,4 +217,4 @@ async def on_message(message):
             await message.channel.send(response)
             await asyncio.sleep(3)
 
-bot.run(TOKEN)
+bot.run(os.environ[DISCORD_TOKEN])
