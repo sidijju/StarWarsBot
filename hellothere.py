@@ -56,7 +56,8 @@ responses = {"hello there":["General Kenobi."],
                                                                                                      "WINDU: The Senate will decide your fate.",
                                                                                                      "SIDIOUS: I *am* the Senate",
                                                                                                      "WINDU: Not yet.",
-                                                                                                     "SIDIOUS: It's treason then."],
+                                                                                                     "SIDIOUS: It's treason then.",
+                                                                                                     "SIDIOUS: *unleashes demonic scream*"],
             "i am the senate": ["Not yet"],
             "the senate will decide your fate": ["I *am* the Senate"],
             "now this is podracing!": ["I'll try spinning!"],
@@ -130,8 +131,9 @@ darth_sidious = ["Now, young Skywalker, you will die.",
                  "Your arrogance blinds you, Master Yoda. Now you will experience the full power of the Dark Side.",
                  "I have waited a long time for this moment, my little green friend",
                  "Darth Vader will become more powerful than either of us",
-                 "No, no, no! YOU WILL DIIEEEE!"
-                 "I love democracy"]
+                 "No, no, no! YOU WILL DIIEEEE!",
+                 "I love democracy",
+                 "We will watch your career with great interest"]
 princess_leia = ["Why, you stuck-up, half-witted, scruffy-looking nerf herder!",
                  "You came in that thing? You're braver than I thought."]
 padme = ["So this is how liberty dies. With thunderous applause.", "You're breaking my heart. You're going down a path I can't follow."]
