@@ -89,7 +89,7 @@ opening_scrolls = {1: ["Turmoil has engulfed the Galactic Republic.",
 
 luke = ["I’ll never turn to the dark side. You’ve failed, your highness. I am a Jedi, like my father before me.",
         "It's not impossible. I used to bullseye womp rats in my T-16 back home, they're not much bigger than two meters."]
-qui_gon = ["There’s always a bigger fish."
+qui_gon = ["There’s always a bigger fish.",
            "The ability does not make you intelligent."]
 yoda = ["Do. Or do not. There is no try.",
         "When gone am I, the last of the Jedi will you be. The Force runs strong in your family. Pass on what you have learned.",
