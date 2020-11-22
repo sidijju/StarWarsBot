@@ -52,9 +52,8 @@ async def on_message(message):
             response = random.choice(character_quotes[random.choice(allcharacters)])
         else:
             key = message.content.lower()[1:]
-            character = aliases[key]
-            if character is not None:
-                response = random.choice(character_quotes[character])
+            if key in aliases.keys():
+                response = random.choice(character_quotes[aliases[key]])
             else:
                 response = "Invalid input. Use $help for a list of valid commands."
         await message.channel.send(response)
