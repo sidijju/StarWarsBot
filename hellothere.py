@@ -39,8 +39,6 @@ opening_scrolls = {1: ["Turmoil has engulfed the Galactic Republic.",
                        "Little does Luke know that the GALACTIC EMPIRE has secretly begun construction on a new armored space station even more powerful than the first dreaded Death Star.",
                        "When completed, this ultimate weapon will spell certain doom for the small band of rebels struggling to restore freedom to the galaxy..."]}
 
-luke = ["I’ll never turn to the dark side. You’ve failed, your highness. I am a Jedi, like my father before me.",
-        "It's not impossible. I used to bullseye womp rats in my T-16 back home, they're not much bigger than two meters."]
 qui_gon = ["There’s always a bigger fish.",
            "The ability to speak does not make you intelligent."]
 yoda = ["Do. Or do not. There is no try.",
@@ -62,17 +60,6 @@ obi_wan = ["The Force will be with you. Always.",
            "So uncivilized.",
            "That's...why I'm here",
            "You were right about one thing, Master. The negotiations were short."]
-darth_vader = ["I find your lack of faith disturbing.",
-               "Just for once, let me look on you with my own eyes.",
-               "This is where the fun begins.",
-               "He was too dangerous to be kept alive.",
-               "Be careful not to *choke* on your aspirations, Director.",
-               "LIAR!",
-               "If you're not with me, then you're my enemy",
-               "Now this is pod-racing!",
-               "NOOOOOOOOOOOOOOOOOOOOO",
-               "Pray I don't alter it any further.",
-               "I don't like sand. It's coarse and rough and irritating and it gets everywhere."]
 mace_windu = ["Not yet",
               "He's too dangerous to be kept alive!"]
 darth_sidious = ["Now, young Skywalker, you will die.",
@@ -88,7 +75,7 @@ princess_leia = ["Why, you stuck-up, half-witted, scruffy-looking nerf herder!",
 padme = ["So this is how liberty dies. With thunderous applause.", "You're breaking my heart. You're going down a path I can't follow."]
 jar_jar = ["Yousa should follow me now, okeeday?", "Mesa called Jar Jar Binks, mesa your humble servant!"]
 
-allcharacters = [luke, qui_gon, yoda, han_solo, obi_wan, darth_vader, mace_windu, darth_sidious, princess_leia, padme, jar_jar]
+allcharacters = ["luke", "qui gon", "yoda", "han solo", "obi wan", "darth vader", "mace windu", "darth sidious", "leia", "padme", "jar jar"]
 
 @bot.event
 async def on_ready():
@@ -134,7 +121,7 @@ async def on_message(message):
 
     elif len(message.content) > 0 and message.content[0] == '$':
         if message.content[1:] == 'random':
-            response = random.choice(random.choice(allcharacters))
+            response = random.choice(character_quotes[random.choice(allcharacters)])
         else:
             key = message.content.lower()[1:]
             character = aliases[key]

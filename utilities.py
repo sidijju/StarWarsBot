@@ -32,7 +32,7 @@ def read_character_quotes(character_list):
         input_lines = read_lines('characters/'+ character + '.txt')
 
 def read_character_aliases():
-    input_lines = read_lines('characters.txt')
+    input_lines = read_lines('characters/characters.txt')
     index = 0
     aliases = {}
     while (index < len(input_lines)):
