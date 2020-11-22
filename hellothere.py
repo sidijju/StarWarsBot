@@ -6,61 +6,13 @@ import asyncio
 import discord
 from discord.ext import commands
 
+from utilities import *
+
 bot = commands.Bot(command_prefix='$')
 
-responses = {"hello there":["General Kenobi."],
-             "impossible":["Perhaps the archives are incomplete."],
-             "help me, obi-wan kenobi":["You're my only hope."],
-             "what a piece of junk!": ["She'll make point five past lightspeed.",
-                                       "She may not look like much, but she's got it where it counts, kid.",
-                                       "I've made a lot of special modifications myself."],
-             "i love you": ["I know."],
-             "you killed my father": ["No. I am your father."],
-             "did you ever hear the tragedy of darth plagueis the wise?": ["I thought not.",
-                                                                           "It's not a story the Jedi would tell you.",
-                                                                           "It's a Sith legend.",
-                                                                           "Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life.",
-                                                                           "He had such a knowledge of the dark side, he could even keep the ones he cared about from dying.",
-                                                                           "The Dark Side of the Force is a pathway to many abilities some consider to be *u* *n* *n* *a* *t* *u* *r* *a* *l*.",
-                                                                           "He became so powerful that the only thing he was afraid of was losing his power, which eventually, of course, he did.",
-                                                                           "Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep.",
-                                                                           "*Ironic*.",
-                                                                           "He could save others from death, but not himself.",
-                                                                           "*opera music intensifies*"],
-             "do": ["Or do not.","There is no try."],
-             "i don't believe it": ["That is why you fail."],
-             "is it possible to learn this power?": ["Not from a Jedi."],
-             "power": ["UNNLIIMMMIITTED POOOOWWEERRRR"],
-             "i have the high ground": ["ANAKIN: You underestimate my power!",
-                                        "OBI-WAN: Don't try it.",
-                                        "ANAKIN: *leaps*",
-                                        "OBI-WAN: *swings glow stick broadly*",
-                                        "ANAKIN: *screams*",
-                                        "OBI-WAN: You were the Chosen One! It was said you would destroy the Sith, not join them. Bring balance to the Force, not leave it in darkness!",
-                                        "ANAKIN: I hate you!",
-                                        "OBI-WAN: You were my brother, Anakin. I loved you."],
-             "master skywalker, there are too many of them": ["*swinging glow stick sounds*"],
-             "you turned her against me.": ["You have done that yourself."],
-             "if you're not with me, then you're my enemy": ["Only a Sith deals in absolutes."],
-             "at last the jedi are no more": ["Not if anything to say about it, I have!"],
-             "from my point of view, the jedi are evil": ["Then you are lost!"],
-             "it's over, anakin": ["I have the high ground"],
-             "you were the chosen one!": [" It was said you would destroy the Sith, not join them.",
-                                          "Bring balance to the Force, not leave it in darkness!"],
-             "i hate you!": ["You were my brother, Anakin.", "I loved you."],
-             "in the name of the galactic senate of the republic, you're under arrest, chancellor": ["SIDIOUS: Are you threatening me, Master Jedi?",
-                                                                                                     "WINDU: The Senate will decide your fate.",
-                                                                                                     "SIDIOUS: I *am* the Senate",
-                                                                                                     "WINDU: Not yet.",
-                                                                                                     "SIDIOUS: It's treason then.",
-                                                                                                     "SIDIOUS: *unleashes demonic scream*"],
-            "i am the senate": ["Not yet"],
-            "the senate will decide your fate": ["I *am* the Senate"],
-            "now this is podracing!": ["I'll try spinning!"],
-            "strike me down": ["And your journey to the Dark Side will be complete."],
-            "i don't like sand": ["It's coarse and rough and irritating and it gets everywhere."],
-             "from my point of view": ["The Jedi are evil"],
-             "execute":["Order 66"]}
+responses = read_responses()
+aliases = read_character_aliases()
+character_quotes = read_character_quotes()
 
 opening_scrolls = {1: ["Turmoil has engulfed the Galactic Republic.",
                        "The taxation of trade routes to outlying star systems is in dispute.",
@@ -177,41 +129,24 @@ async def on_message(message):
 
         for response in scrolls:
             await message.channel.send(response)
-            #await asyncio.sleep(3)
+            await asyncio.sleep(1)
 
 
     elif len(message.content) > 0 and message.content[0] == '$':
         if message.content[1:] == 'random':
             response = random.choice(random.choice(allcharacters))
-        elif "luke" in message.content.lower()[1:]:
-            response = random.choice(luke)
-        elif "qui gon" in message.content.lower()[1:]:
-            response = random.choice(qui_gon)
-        elif "yoda" in message.content.lower()[1:]:
-            response = random.choice(yoda)
-        elif "han solo" in message.content.lower()[1:]:
-            response = random.choice(han_solo)
-        elif "obi wan" in message.content.lower()[1:]:
-            response = random.choice(obi_wan)
-        elif "vader" in message.content.lower()[1:]:
-            response = random.choice(darth_vader)
-        elif "mace windu" in message.content.lower()[1:] or "windu" in message.content.lower()[1:]:
-            response = random.choice(mace_windu)
-        elif "sidious" in message.content.lower()[1:] or "palpatine" in message.content.lower()[1:]:
-            response = random.choice(darth_sidious)
-        elif "leia" in message.content.lower()[1:]:
-            response = random.choice(princess_leia)
-        elif "padme" in message.content.lower()[1:]:
-            response = random.choice(padme)
-        elif "jar jar" in message.content.lower()[1:]:
-            response = random.choice(jar_jar)
         else:
-            response = "Invalid input"
+            key = message.content.lower()[1:]
+            character = aliases[key]
+            if character is not None:
+                response = random.choice(character_quotes[character])
+            else:
+                response = "Invalid input"
         await message.channel.send(response)
 
     elif message.content.lower() in responses:
         for response in responses[message.content.lower()]:
             await message.channel.send(response)
-            #await asyncio.sleep(3)
+            await asyncio.sleep(1)
 
 bot.run(os.environ['DISCORD_TOKEN'])
