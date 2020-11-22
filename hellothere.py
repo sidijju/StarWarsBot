@@ -39,7 +39,7 @@ async def on_message(message):
         await message.channel.send("Pray I don't alter it any further.")
 
     elif len(message.content) > 0 and '$openings' in message.content.lower():
-        request = message.content.lower()[9:]
+        request = message.content.lower()[9:].strip()
         scrolls = []
         if request in opening_scrolls.keys():
             scrolls = opening_scrolls[request]
