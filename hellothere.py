@@ -39,8 +39,10 @@ async def on_message(message):
         await message.channel.send("Pray I don't alter it any further.")
 
     elif len(message.content) > 0 and '$openings' in message.content.lower():
-        request = message.content.lower()[9:].replace(' ', '').lower()
-        scrolls = opening_scrolls[request]
+        request = message.content.lower()[9:]
+        scrolls = []
+        if request in opening_scrolls.keys():
+            scrolls = opening_scrolls[request]
         for response in scrolls:
             await message.channel.send(response)
             await asyncio.sleep(1)
