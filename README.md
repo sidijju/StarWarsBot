@@ -3,7 +3,6 @@
 Discord bot for random Star Wars things. 
 
 ## Discord Bot Link
-(Pending approval)
 https://top.gg/bot/776996687428321291
 
 ## Supported Operations
