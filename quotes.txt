@@ -85,3 +85,5 @@ Execute 1
 Order 66
 Are you threatening me, Master Jedi? 1
 The Senate will decide your fate
+Hold on 1
+This whole operation was your idea
