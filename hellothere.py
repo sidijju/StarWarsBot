@@ -10,7 +10,7 @@ from utilities import *
 
 bot = commands.Bot(command_prefix='$')
 
-allcharacters = ["luke", "quigon", "yoda", "hansolo", "obiwan", "darthvader", "macewindu", "darthsidious", "leia", "padme", "jarjar"]
+allcharacters = ["luke", "quigon", "yoda", "hansolo", "obiwan", "darthvader", "macewindu", "darthsidious", "leia", "padme", "jarjar", "hondo"]
 
 responses = read_responses()
 aliases = read_character_aliases()
@@ -20,7 +20,7 @@ opening_scrolls = read_scrolls()
 @bot.event
 async def on_ready():
     print(f'{bot.user.name} has connected to Discord!')
-    await bot.change_presence(game=discord.Game(name="Currently operating on " + str(len(bot.servers)) + " Servers.", type=0))
+    await bot.change_presence(game=discord.Game(name="Currently operating on " + str(len(client.servers)) + " Servers.", type=0))
 
 @bot.event
 async def on_message(message):
