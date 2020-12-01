@@ -32,7 +32,7 @@ async def on_message(message):
         response = ["$openings <movie number or name (1-6)> ---> opening scroll of specified movie",
                     "$random ---> random quote",
                     "$<character name> ---> random quote from character",
-                    "  current characters --> luke, qui gon, yoda, han solo, obi wan, vader, mace windu, sidious, leia, padme, jar jar",
+                    "  current characters --> luke, qui gon, yoda, han solo, obi wan, vader, mace windu, sidious, leia, padme, jar jar, c-3po, and hondo ohnaka",
                     "<quote> ---> response (if in database)"]
         for resp in response:
             await message.channel.send(resp)
