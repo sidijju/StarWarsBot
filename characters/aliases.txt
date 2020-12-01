@@ -18,7 +18,8 @@ The Chosen One
 Mace Windu 3
 Mace
 Windu
-Darth Sidious 7
+Darth Sidious 8
+The Senate
 The Emperor
 Sheev Palpatine
 Chancellor
