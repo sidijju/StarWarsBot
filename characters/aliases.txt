@@ -32,3 +32,6 @@ Padme 2
 Padme Amidala
 Jar Jar 2
 Jar Jar Binks
+Hondo 3
+Hondo Ohnaka 
+Ohnaka
