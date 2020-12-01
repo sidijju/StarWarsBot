@@ -10,7 +10,7 @@ from utilities import *
 
 bot = commands.Bot(command_prefix='$')
 
-allcharacters = ["luke", "quigon", "yoda", "hansolo", "obiwan", "darthvader", "macewindu", "darthsidious", "leia", "padme", "jarjar", "hondo"]
+allcharacters = ["luke", "quigon", "yoda", "hansolo", "obiwan", "darthvader", "macewindu", "darthsidious", "leia", "padme", "jarjar", "hondo", "c3po"]
 
 responses = read_responses()
 aliases = read_character_aliases()

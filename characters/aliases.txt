@@ -33,5 +33,7 @@ Padme Amidala
 Jar Jar 2
 Jar Jar Binks
 Hondo 3
-Hondo Ohnaka 
+Hondo Ohnaka
 Ohnaka
+C3PO 2
+C-3PO
