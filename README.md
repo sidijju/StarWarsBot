@@ -4,6 +4,7 @@ Discord bot for random Star Wars things.
 
 ## Discord Bot Link
 https://top.gg/bot/776996687428321291
+Currently on 53 servers and counting!
 
 ## Supported Operations
 
@@ -19,7 +20,7 @@ ex. $openings revenge of the sith --> opening scroll of Revenge of the Sith
 ex. $luke --> random quote from Luke Skywalker 
 ex. $sidious --> random quote from Darth Sidious
 
-Supported characters: Luke, Qui Gon, Yoda, Han Solo, Obi Wan, Vader, Mace Windu, Sidious, Leia, Padme, Jar Jar
+Supported characters: Luke, Qui Gon, Yoda, Han Solo, Obi Wan, Vader, Mace Windu, Sidious, Leia, Padme, Jar Jar, Hondo Ohnaka
 
 ### (quote) --> response (if in database) 
 ex. Hello there --> General Kenobi
