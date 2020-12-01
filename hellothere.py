@@ -24,7 +24,6 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    print(f'Currently connected to {len(bot.guilds)} servers')
     if message.author == bot.user:
         return
 
