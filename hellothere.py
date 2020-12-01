@@ -19,11 +19,8 @@ opening_scrolls = read_scrolls()
 
 @bot.event
 async def on_ready():
-    print(f'{bot.user.name} has connected to Discord!')
-    print(len(bot.guilds))
-    for guild in bot.guilds:
-        print(guild.name)
-
+    print(f'{bot.user.name} has connected to Discord')
+    print(f'Currently connected to {len(bot.guilds)} servers')
 
 @bot.event
 async def on_message(message):
