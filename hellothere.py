@@ -26,6 +26,10 @@ async def on_ready():
 async def on_message(message):
     msg = message.content.lower()
     channel = message.channel
+
+    if msg == "vote":
+        await channel.send("I vote in affirmation of the resolution")
+
     if message.author == bot.user:
         return
 
