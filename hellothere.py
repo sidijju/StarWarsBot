@@ -24,10 +24,11 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
+    message_string = message.content.lower()
     if message.author == bot.user:
         return
 
-    if "$help" == message.content.lower():
+    if "$help" == message_string:
         response = ["$openings <movie number or name (1-6)> ---> opening scroll of specified movie",
                     "$random ---> random quote",
                     "$<character name> ---> random quote from character",
@@ -36,11 +37,11 @@ async def on_message(message):
         for resp in response:
             await message.channel.send(resp)
 
-    elif "alter" in message.content.lower():
+    elif "alter" in message_string:
         await message.channel.send("Pray I don't alter it any further.")
 
-    elif len(message.content) > 0 and '$openings' in message.content.lower():
-        request = message.content.lower()[9:].strip()
+    elif len(message_string) > 0 and '$openings' in message_string:
+        request = message_string[9:].strip()
         scrolls = []
         if request in opening_scrolls.keys():
             scrolls = opening_scrolls[request]
@@ -48,19 +49,19 @@ async def on_message(message):
             await message.channel.send(response)
             await asyncio.sleep(1)
 
-    elif len(message.content) > 0 and message.content[0] == '$':
-        if message.content[1:] == 'random':
+    elif len(message_string) > 0 and message_string[0] == '$':
+        if message_string[1:] == 'random':
             response = random.choice(character_quotes[random.choice(allcharacters)])
         else:
-            key = message.content.lower()[1:]
+            key = message_string[1:]
             if key in aliases.keys():
                 response = random.choice(character_quotes[aliases[key]])
             else:
                 response = "Invalid input. Use $help for a list of valid commands."
         await message.channel.send(response)
 
-    elif message.content.lower() in responses:
-        for response in responses[message.content.lower()]:
+    elif message_string in responses:
+        for response in responses[message_string]:
             await message.channel.send(response)
             await asyncio.sleep(1)
 
