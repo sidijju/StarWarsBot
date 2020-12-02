@@ -25,6 +25,7 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     message_string = message.content.lower()
+    channel = message.channel
     if message.author == bot.user:
         return
 
@@ -35,10 +36,10 @@ async def on_message(message):
                     "  current characters --> luke, qui gon, yoda, han solo, obi wan, vader, mace windu, sidious, leia, padme, jar jar, c-3po, and hondo ohnaka",
                     "<quote> ---> response (if in database)"]
         for resp in response:
-            await message.channel.send(resp)
+            await channel.send(resp)
 
     elif "alter" in message_string:
-        await message.channel.send("Pray I don't alter it any further.")
+        await channel.send("Pray I don't alter it any further.")
 
     elif len(message_string) > 0 and '$openings' in message_string:
         request = message_string[9:].strip()
@@ -46,7 +47,7 @@ async def on_message(message):
         if request in opening_scrolls.keys():
             scrolls = opening_scrolls[request]
         for response in scrolls:
-            await message.channel.send(response)
+            await channel.send(response)
             await asyncio.sleep(1)
 
     elif len(message_string) > 0 and message_string[0] == '$':
@@ -58,11 +59,11 @@ async def on_message(message):
                 response = random.choice(character_quotes[aliases[key]])
             else:
                 response = "Invalid input. Use $help for a list of valid commands."
-        await message.channel.send(response)
+        await channel.send(response)
 
     elif message_string in responses:
         for response in responses[message_string]:
-            await message.channel.send(response)
+            await channel.send(response)
             await asyncio.sleep(1)
 
 bot.run(os.environ['DISCORD_TOKEN'])
