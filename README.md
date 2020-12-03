@@ -6,8 +6,7 @@ Discord bot for random Star Wars things.
 https://top.gg/bot/776996687428321291
 
 Currently on 100 servers and counting!
-
-In the process of being verified!
+Verification process ongoing!
 
 ## Supported Operations
 
