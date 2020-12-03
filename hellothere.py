@@ -29,6 +29,8 @@ async def on_message(message):
 
     if msg == "vote":
         await channel.send("I vote in affirmation of the resolution")
+    if "start a warsaw vote" in msg:
+        await channel.send("I initiate a vote to warsaw the aforementioned person")
 
     if message.author == bot.user:
         return
