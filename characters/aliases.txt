@@ -10,7 +10,8 @@ Solo
 Obi Wan 3
 Obi Wan Kenobi
 Kenobi
-Darth Vader 5
+Darth Vader 6
+Skyguy
 Vader
 Anakin
 Anakin Skywalker
