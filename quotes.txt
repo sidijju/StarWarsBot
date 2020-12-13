@@ -11,7 +11,7 @@ I've made a lot of special modifications myself
 I love you 1
 I know
 You killed my father 1
-No, I am your father
+No, *I* am your father
 Did you ever hear the tragedy of Darth Plagueis the Wise? 11
 I thought not
 It's not a story the Jedi would tell you
@@ -48,9 +48,9 @@ Master Skywalker, there are too many of them 1
 *swinging glow stick sounds*
 You turned her against me 1
 You have done that yourself
-If youre not with me 1
+If you're not with me 1
 Then you're my enemy
-If youre not with me, then youre my enemy 1
+If you're not with me, then you're my enemy 1
 Only a Sith deals in absolutes
 At last the Jedi are no more 1
 Not if anything to say about it, I have!
