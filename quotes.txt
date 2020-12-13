@@ -48,15 +48,15 @@ Master Skywalker, there are too many of them 1
 *swinging glow stick sounds*
 You turned her against me 1
 You have done that yourself
-If you're not with me 1
+If youre not with me 1
 Then you're my enemy
-If you're not with me, then you're my enemy 1
+If youre not with me, then youre my enemy 1
 Only a Sith deals in absolutes
 At last the Jedi are no more 1
 Not if anything to say about it, I have!
 From my point of view, the Jedi are evil! 1
 Then you are lost!
-It's over, Anakin 1
+Its over, Anakin 1
 I have the high ground
 You were the chosen one! 2
 It was said you would destroy the Sith, not join them!
@@ -80,7 +80,7 @@ I'll try spinning!
 Strike me down 1
 And your journey to the Dark Side will be complete
 I don't like sand 1
-It's coarse and rough and irritating and it gets everywhere
+Its coarse and rough and irritating and it gets everywhere
 From my point of view 1
 The Jedi are evil
 Execute 1
@@ -89,8 +89,13 @@ Are you threatening me, Master Jedi? 1
 The Senate will decide your fate
 Hold on 1
 This whole operation was your idea
-It's treason then 4
+Its treason then 4
 *screams*
 *kills small horn man*
 *kills big horn man*
 *kills green fish man*
+Obi-Wan never told you what happened to your father 4
+LUKE: He told me enough! He told me you killed him!
+VADER: No. *I* am your father
+LUKE: No. That's not true. That's impossible
+VADER: Search your feelings. You know it to be true
