@@ -21,7 +21,8 @@ The Chosen One
 Mace Windu 3
 Mace
 Windu
-Darth Sidious 8
+Darth Sidious 9
+Palps
 The Senate
 The Emperor
 Sheev Palpatine
