@@ -10,7 +10,9 @@ Solo
 Obi Wan 3
 Obi Wan Kenobi
 Kenobi
-Darth Vader 6
+Darth Vader 8
+A Napkin
+Alkaline Skywalker
 Skyguy
 Vader
 Anakin
