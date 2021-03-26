@@ -1,3 +1,5 @@
+import re
+
 def read_line(line_arr):
     line = ""
     for word in line_arr[:-1]:
@@ -23,7 +25,10 @@ def read_responses():
         line_arr = input_lines[index].split(' ')
         response_length = int(line_arr[-1])
         key = read_line(line_arr).lower()
-        responses[key] = select_lines(input_lines, index + 1, response_length)
+        lines = select_lines(input_lines, index + 1, response_length)
+        responses[key] = lines
+        key = re.sub(r'[^\w\s]', '', key)
+        responses[key] = lines
         index = index + response_length + 1
     return responses
 

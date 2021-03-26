@@ -2,6 +2,7 @@
 import os
 import random
 import asyncio
+import re
 
 import discord
 from discord.ext import commands
@@ -26,7 +27,7 @@ async def on_ready():
 async def on_message(message):
     msg = message.content.lower()
     channel = message.channel
-    
+
     if message.author == bot.user:
         return
 
