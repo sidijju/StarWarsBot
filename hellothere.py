@@ -10,6 +10,7 @@ from discord.ext import commands
 from utilities import *
 
 intents = discord.Intents.default()
+intents.message_content = True
 bot = commands.Bot(command_prefix='$', intents=intents)
 
 allcharacters = ["luke", "quigon", "yoda", "hansolo", "obiwan", "darthvader", "macewindu", "darthsidious", "leia", "padme", "jarjar", "hondo", "c3po"]
