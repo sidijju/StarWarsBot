@@ -11,20 +11,19 @@ Currently on 483 servers and counting!
 
 ## Supported Operations
 
-### $openings (movie number or name (1-6)) 
+### /openings (movie number or name (1-6)) 
 opening scroll of specified Star Wars movie 
-ex. $openings 1 --> opening scroll of The Phantom Menace 
-ex. $openings revenge of the sith --> opening scroll of Revenge of the Sith
+ex. /openings 1 --> opening scroll of The Phantom Menace 
+ex. /openings-name revenge of the sith --> opening scroll of Revenge of the Sith
 
-### $random --> random quote from any character eg. $random
+### /random
+random quote from any character 
+ex. /random --> "Hello there"
 
-### $(character name) --> random quote from specified character 
-(name must have no punctuation other than spaces, and for Sith Lords, remove the Darth) 
-ex. $luke --> random quote from Luke Skywalker 
-ex. $sidious --> random quote from Darth Sidious
-
+### /random-character (character name) 
+random quote from the specified character
+ex. /random Obi Wan --> "Hello there"
 Supported characters: Luke, Qui Gon, Yoda, Han Solo, Obi Wan, Vader, Mace Windu, Sidious, Leia, Padme, Jar Jar, Hondo Ohnaka, C-3PO, Skyguy
-
 
 ### (quote) --> response (if in database) 
 ex. Hello there --> General Kenobi
