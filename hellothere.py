@@ -5,13 +5,16 @@ import asyncio
 import re
 
 import discord
-from discord.ext import commands
+from discord import app_commands
 
 from utilities import *
 
 intents = discord.Intents.default()
 intents.message_content = True
-bot = commands.Bot(command_prefix='$', intents=intents)
+
+intents = discord.Intents.default()
+client = discord.Client(intents=intents)
+tree = app_commands.CommandTree(client)
 
 allcharacters = ["luke", "quigon", "yoda", "hansolo", "obiwan", "darthvader", "macewindu", "darthsidious", "leia", "padme", "jarjar", "hondo", "c3po"]
 
@@ -20,12 +23,19 @@ aliases = read_character_aliases()
 character_quotes = read_character_quotes(allcharacters)
 opening_scrolls = read_scrolls()
 
-@bot.event
+
+@client.event
 async def on_ready():
+    await tree.sync(guild=discord.Object(id=Your guild id))
     print(f'{bot.user.name} has connected to Discord')
     print(f'Currently connected to {len(bot.guilds)} servers')
 
-@bot.event
+
+@tree.command(name = "openings", description = "print the opening scroll of the requested Star Wars movie", guild=discord.Object(id=1060020765736579174))
+async def openings(interaction, ):
+    await interaction.response.send_message("Hello!")
+
+@client.event
 async def on_message(message):
     msg = message.content.lower()
     channel = message.channel
@@ -70,4 +80,4 @@ async def on_message(message):
             await channel.send(response)
             await asyncio.sleep(1)
 
-bot.run(os.environ['DISCORD_TOKEN'])
+client.run(os.environ['DISCORD_TOKEN'])
