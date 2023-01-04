@@ -62,10 +62,9 @@ def read_scrolls():
     while (index < len(input_lines)):
         line_arr = input_lines[index].split(' ')
         num_lines = int(line_arr[-1])
-        key = read_line(line_arr).lower()
+        read_line(line_arr).lower()
         lines = select_lines(input_lines, index + 1, num_lines)
-        scrolls[str(movie)] = lines
-        scrolls[key] = lines
+        scrolls[movie] = lines
         index = index + num_lines + 1
         movie = movie + 1
     return scrolls
