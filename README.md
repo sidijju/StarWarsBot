@@ -23,7 +23,7 @@ ex. $openings revenge of the sith --> opening scroll of Revenge of the Sith
 ex. $luke --> random quote from Luke Skywalker 
 ex. $sidious --> random quote from Darth Sidious
 
-Supported characters: Luke, Qui Gon, Yoda, Han Solo, Obi Wan, Vader, Mace Windu, Sidious, Leia, Padme, Jar Jar, Hondo Ohnaka, C-3PO
+Supported characters: Luke, Qui Gon, Yoda, Han Solo, Obi Wan, Vader, Mace Windu, Sidious, Leia, Padme, Jar Jar, Hondo Ohnaka, C-3PO, Skyguy
 
 
 ### (quote) --> response (if in database) 
