@@ -23,7 +23,7 @@ opening_scrolls = read_scrolls()
 class StarWarsBot(discord.Client):
     def __init__(self):
         intents = discord.Intents.default()
-        #intents.message_content = False
+        intents.message_content = True
         super().__init__(intents=intents)
         self.read_msg = intents.message_content
 
